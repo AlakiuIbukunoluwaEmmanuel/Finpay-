@@ -1,0 +1,322 @@
+/* ==========================
+   FINPAY SIGN UP CSS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    overflow:hidden;
+
+    background:radial-gradient(
+        circle at top left,
+        #19c37d 100%,
+        #d9f8e8 45%,
+        #f4fff8 0%
+    );
+}
+
+/* ==========================
+   BACKGROUND SHAPES
+========================== */
+
+.background-shapes{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.shape{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(80px);
+}
+
+.shape.one{
+    width:300px;
+    height:300px;
+    background:rgba(25,195,125,.25);
+    top:-80px;
+    left:-80px;
+}
+
+.shape.two{
+    width:250px;
+    height:250px;
+    background:rgba(25,195,125,.18);
+    bottom:-70px;
+    right:-70px;
+}
+
+/* ==========================
+   SIGN UP CARD
+========================== */
+
+.signup-card{
+
+    width:100%;
+    max-width:430px;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.logo img{
+    width:80px;
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+h1{
+    text-align:center;
+    color:#0f172a;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#64748b;
+    margin-bottom:30px;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.input-group{
+
+    position:relative;
+
+    margin-bottom:18px;
+
+}
+
+.input-group i:first-child{
+
+    position:absolute;
+
+    left:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#19c37d;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:15px 48px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.8);
+
+    font-size:15px;
+
+}
+
+#togglePassword,
+#toggleConfirmPassword{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#888;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.signup-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#19c37d;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.signup-btn:hover{
+
+    background:#14a96b;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+   DIVIDER
+========================== */
+
+.divider{
+
+    text-align:center;
+
+    margin:25px 0;
+
+    color:#666;
+
+}
+
+/* ==========================
+   SOCIAL BUTTONS
+========================== */
+
+.social-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.social-buttons button{
+
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.google{
+
+    background:#fff;
+
+}
+
+.facebook{
+
+    background:#1877f2;
+
+    color:white;
+
+}
+
+.social-buttons button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+   LOGIN LINK
+========================== */
+
+.auth-link{
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.auth-link a{
+
+    color:#19c37d;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.auth-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:480px){
+
+    .signup-card{
+
+        padding:30px 22px;
+
+    }
+
+    .social-buttons{
+
+        flex-direction:column;
+
+    }
+
+}

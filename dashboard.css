@@ -1,0 +1,2222 @@
+/*====================================================
+
+            FINPAY DASHBOARD CSS V2
+                  PART 1
+
+         RESET • BACKGROUND • LAYOUT
+
+====================================================*/
+
+/*============================
+          RESET
+=============================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #014421,
+        #00A651,
+        #00C853,
+        #ffffff
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 18s ease infinite;
+
+}
+
+
+/*============================
+     BACKGROUND ANIMATION
+=============================*/
+
+@keyframes bgMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+
+/*============================
+      MAIN DASHBOARD
+=============================*/
+
+.dashboard{
+
+    display:flex;
+
+    width:100%;
+
+    min-height:100vh;
+
+}
+
+
+/*============================
+        SIDEBAR
+=============================*/
+
+.sidebar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:250px;
+
+    height:100vh;
+
+    padding:25px 18px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-right:1px solid rgba(255,255,255,.12);
+
+    box-shadow:6px 0 25px rgba(0,0,0,.10);
+
+    z-index:1000;
+
+}
+
+
+/*============================
+          LOGO
+=============================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:45px;
+
+}
+
+.logo img{
+
+    width:48px;
+
+    height:48px;
+
+    object-fit:contain;
+
+}
+
+.logo h2{
+
+    color:#ffffff;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+/*============================
+       SIDEBAR MENU
+=============================*/
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    margin-bottom:12px;
+
+    border-radius:18px;
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.sidebar li i{
+
+    width:22px;
+
+    font-size:18px;
+
+    text-align:center;
+
+}
+
+.sidebar li span{
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.sidebar li:hover{
+
+    background:rgba(255,255,255,.12);
+
+    transform:translateX(6px);
+
+}
+
+.sidebar li.active{
+
+    background:linear-gradient(
+        135deg,
+        #00C853,
+        #00E676
+    );
+
+    box-shadow:0 12px 30px rgba(0,200,83,.25);
+
+}
+
+
+/*============================
+      CONTENT AREA
+=============================*/
+
+.content{
+
+    flex:1;
+
+    margin-left:250px;
+
+    padding:35px;
+
+    width:calc(100% - 250px);
+
+}
+
+
+/*============================
+     GLASS CARD STYLE
+=============================*/
+
+.glass{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:25px;
+
+}
+
+
+/*============================
+      SECTION TITLE
+=============================*/
+
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    color:#ffffff;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.section-title a{
+
+    text-decoration:none;
+
+    color:#D9FFE7;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.section-title a:hover{
+
+    color:#ffffff;
+
+}
+
+
+/*============================
+      FADE ANIMATION
+=============================*/
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/*====================================================
+
+            FINPAY DASHBOARD CSS V2
+                  PART 2
+
+     HEADER • PROFILE • BALANCE CARD
+
+====================================================*/
+
+/*============================
+          TOPBAR
+=============================*/
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topbar h1{
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.topbar p{
+
+    color:rgba(255,255,255,.75);
+
+    margin-top:6px;
+
+    font-size:15px;
+
+}
+
+
+/*============================
+        PROFILE AREA
+=============================*/
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+
+/* Notification Button */
+
+.icon-btn{
+
+    position:relative;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.icon-btn i{
+
+    font-size:20px;
+
+}
+
+.icon-btn:hover{
+
+    background:#00C853;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,200,83,.35);
+
+}
+
+
+/* Notification Dot */
+
+.notification-dot{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    width:10px;
+
+    height:10px;
+
+    background:#ff3b30;
+
+    border-radius:50%;
+
+    border:2px solid white;
+
+}
+
+
+/*============================
+            AVATAR
+=============================*/
+
+.profile img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border:3px solid #00E676;
+
+    box-shadow:0 0 18px rgba(0,230,118,.45);
+
+}
+
+
+/*============================
+        BALANCE CARD
+=============================*/
+
+.balance-card{
+
+    display:grid;
+
+    grid-template-columns:1fr minmax(320px,420px);
+
+    gap:35px;
+
+    align-items:center;
+
+}
+
+
+/* Green Glow */
+
+.balance-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    background:#00C853;
+
+    border-radius:50%;
+
+    filter:blur(130px);
+
+    opacity:.15;
+
+    top:-140px;
+
+    left:-120px;
+
+}
+
+.balance-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:#00E676;
+
+    border-radius:50%;
+
+    filter:blur(110px);
+
+    opacity:.12;
+
+    bottom:-90px;
+
+    right:-80px;
+
+}
+
+
+/*============================
+        BALANCE INFO
+=============================*/
+
+.balance-info{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.balance-info p{
+
+    color:rgba(255,255,255,.70);
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+}
+
+
+/*============================
+       BALANCE ROW
+=============================*/
+
+.balance-row{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:30px;
+
+}
+
+.balance-row h2{
+
+    color:#ffffff;
+
+    font-size:42px;
+
+    font-weight:700;
+
+}
+
+
+/* Eye Button */
+
+#toggleBalance{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#toggleBalance:hover{
+
+    background:#00C853;
+
+    transform:scale(1.08);
+
+}
+
+
+/*============================
+      ACCOUNT INFO
+=============================*/
+
+.account-info{
+
+    display:flex;
+
+    gap:55px;
+
+}
+
+.account-info small{
+
+    color:rgba(255,255,255,.70);
+
+    font-size:12px;
+
+}
+
+.account-info h4{
+
+    margin-top:6px;
+
+    color:#ffffff;
+
+    font-size:17px;
+
+    font-weight:600;
+
+}
+/*====================================================
+
+            FINPAY DASHBOARD CSS V2
+                  PART 3
+
+          PREMIUM CARD SLIDER
+
+====================================================*/
+
+
+/*============================
+    CARD SLIDER CONTAINER
+=============================*/
+
+.card-slider-container{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    width:100%;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+/*============================
+     NAVIGATION BUTTONS
+=============================*/
+
+.card-btn{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    flex-shrink:0;
+
+}
+
+.card-btn i{
+
+    font-size:18px;
+
+}
+
+.card-btn:hover{
+
+    background:#00C853;
+
+    transform:scale(1.08);
+
+    box-shadow:0 12px 25px rgba(0,200,83,.35);
+
+}
+
+
+/*============================
+        SLIDER
+=============================*/
+
+.slider{
+
+    width:100%;
+
+    max-width:420px;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+}
+
+.cards{
+
+    display:flex;
+
+    width:100%;
+
+    transition:transform .45s ease;
+
+}
+
+.bank-card{
+
+    flex:0 0 100%;
+
+    width:100%;
+
+    min-width:100%;
+
+    height:220px;
+
+    padding:25px;
+
+    border-radius:25px;
+
+}
+
+
+/*============================
+      CARD THEMES
+=============================*/
+
+.classic{
+
+    background:linear-gradient(
+        135deg,
+        #00C853,
+        #00E676
+    );
+
+}
+
+.plus{
+
+    background:linear-gradient(
+        135deg,
+        #009B63,
+        #00C853
+    );
+
+}
+
+.elite{
+
+    background:linear-gradient(
+        135deg,
+        #024B2F,
+        #01281A
+    );
+
+}
+
+
+/*============================
+      GLASS EFFECT
+=============================*/
+
+.bank-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.10);
+
+    border-radius:50%;
+
+    top:-50px;
+
+    right:-40px;
+
+}
+
+.bank-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:50%;
+
+    bottom:-120px;
+
+    left:-70px;
+
+}
+
+
+/*============================
+       CARD HEADER
+=============================*/
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.card-logo{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+}
+
+.card-type{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    background:rgba(255,255,255,.15);
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+}
+
+
+/*============================
+        CHIP
+=============================*/
+
+.chip{
+
+    width:58px;
+
+    height:42px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        #FFD54F,
+        #D4AF37
+    );
+
+    margin-bottom:22px;
+
+}
+
+
+/*============================
+     CARD NUMBER
+=============================*/
+
+.card-number{
+
+    font-size:22px;
+
+    letter-spacing:3px;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+}
+
+
+/*============================
+      CARD FOOTER
+=============================*/
+
+.card-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.card-footer small{
+
+    color:rgba(255,255,255,.75);
+
+    font-size:11px;
+
+}
+
+.card-footer h4{
+
+    margin-top:5px;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+/*============================
+      CARD HOVER
+=============================*/
+
+.bank-card:hover{
+
+    transform:translateY(-6px);
+
+    transition:.35s;
+
+}
+
+
+/*============================
+      INDICATORS
+=============================*/
+
+.card-indicators{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+.dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.30);
+
+    transition:.3s;
+
+}
+
+.dot.active{
+
+    background:#00E676;
+
+    transform:scale(1.3);
+
+}
+/*====================================================
+
+            FINPAY DASHBOARD CSS V2
+                  PART 4
+
+              QUICK ACTIONS
+
+====================================================*/
+
+
+/*============================
+       QUICK ACTIONS
+=============================*/
+
+.quick-actions{
+
+    margin-bottom:40px;
+
+}
+
+
+/*============================
+       ACTION GRID
+=============================*/
+
+.action-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+
+/*============================
+       ACTION CARD
+=============================*/
+
+.action-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    padding:28px 18px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* Glass Reflection */
+
+.action-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+
+    height:120px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-40px;
+
+    right:-35px;
+
+}
+
+
+/* Hover */
+
+.action-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(0,200,83,.18);
+
+    box-shadow:
+
+        0 18px 35px rgba(0,200,83,.25);
+
+}
+
+
+/* Icon */
+
+.action-card i{
+
+    font-size:34px;
+
+    color:#00E676;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.action-card:hover i{
+
+    transform:scale(1.15);
+
+}
+
+
+/* Text */
+
+.action-card span{
+
+    display:block;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+/*============================
+      SPECIAL EFFECT
+=============================*/
+
+.action-card:active{
+
+    transform:scale(.96);
+
+}
+
+
+/*============================
+        ICON COLORS
+=============================*/
+
+.action-card:nth-child(1) i{
+
+    color:#00E676;
+
+}
+
+.action-card:nth-child(2) i{
+
+    color:#4FC3F7;
+
+}
+
+.action-card:nth-child(3) i{
+
+    color:#81C784;
+
+}
+
+.action-card:nth-child(4) i{
+
+    color:#FFD54F;
+
+}
+
+.action-card:nth-child(5) i{
+
+    color:#FFB74D;
+
+}
+
+.action-card:nth-child(6) i{
+
+    color:#A5D6A7;
+
+}
+
+.action-card:nth-child(7) i{
+
+    color:#80DEEA;
+
+}
+
+.action-card:nth-child(8) i{
+
+    color:#00E676;
+
+}
+/*====================================================
+
+            FINPAY DASHBOARD CSS V2
+                  PART 5
+
+          ANALYTICS & STATISTICS
+
+====================================================*/
+
+
+/*============================
+        ANALYTICS
+=============================*/
+
+.analytics{
+
+    margin-bottom:40px;
+
+}
+
+
+/*============================
+      ANALYTICS CARD
+=============================*/
+
+.analytics-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:28px;
+
+    padding:30px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+
+/*============================
+      STATS SECTION
+=============================*/
+
+.analytics-card{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+
+/*============================
+      INFO CARDS
+=============================*/
+
+.analytics-info{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* Glass Reflection */
+
+.analytics-info::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.06);
+
+    top:-50px;
+
+    right:-40px;
+
+}
+
+
+/* Hover */
+
+.analytics-info:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.12);
+
+}
+
+
+/*============================
+        TITLES
+=============================*/
+
+.analytics-info h3{
+
+    color:rgba(255,255,255,.70);
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+    font-weight:500;
+
+}
+
+
+/*============================
+       AMOUNT
+=============================*/
+
+.analytics-info h1{
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+
+/*============================
+       BADGES
+=============================*/
+
+.income{
+
+    display:inline-block;
+
+    color:#00E676;
+
+    background:rgba(0,230,118,.15);
+
+    padding:6px 14px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.expense{
+
+    display:inline-block;
+
+    color:#FFD54F;
+
+    background:rgba(255,213,79,.12);
+
+    padding:6px 14px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+/*============================
+      CHART AREA
+=============================*/
+
+.chart{
+
+    grid-column:1/-1;
+
+    margin-top:10px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:20px;
+
+    height:320px;
+
+    position:relative;
+
+    border:1px solid rgba(255,255,255,.10);
+
+}
+
+
+/*============================
+       CHART CANVAS
+=============================*/
+
+#financeChart{
+
+    width:100% !important;
+
+    height:100% !important;
+
+}
+
+
+/*============================
+      CHART HOVER
+=============================*/
+
+.chart:hover{
+
+    box-shadow:
+
+        0 15px 35px rgba(0,200,83,.18);
+
+}
+
+
+/*============================
+      FADE EFFECT
+=============================*/
+
+.analytics-info{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.chart{
+
+    animation:fadeUp 1s ease;
+
+}
+/*====================================================
+
+            FINPAY DASHBOARD CSS V2
+                  PART 6
+
+          RECENT TRANSACTIONS
+
+====================================================*/
+
+
+/*============================
+        TRANSACTIONS
+=============================*/
+
+.transactions{
+
+    margin-bottom:45px;
+
+}
+
+
+/*============================
+     TRANSACTION LIST
+=============================*/
+
+.transaction-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/*============================
+     TRANSACTION ITEM
+=============================*/
+
+.transaction-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px 22px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    transition:.35s;
+
+    cursor:pointer;
+
+}
+
+.transaction-item:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.15);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.15);
+
+}
+
+
+/*============================
+      ICON CIRCLE
+=============================*/
+
+.transaction-icon{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+
+/* Income */
+
+.transaction-icon.income{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #00C853,
+
+        #00E676
+
+    );
+
+}
+
+
+/* Expense */
+
+.transaction-icon.expense{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #0288D1,
+
+        #29B6F6
+
+    );
+
+}
+
+
+/*============================
+        DETAILS
+=============================*/
+
+.transaction-info{
+
+    flex:1;
+
+    margin-left:18px;
+
+}
+
+.transaction-info h3{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    margin-bottom:6px;
+
+}
+
+.transaction-info p{
+
+    color:rgba(255,255,255,.70);
+
+    font-size:14px;
+
+}
+
+
+/*============================
+        AMOUNT
+=============================*/
+
+.transaction-amount{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+
+/* Income */
+
+.income-text{
+
+    color:#00E676;
+
+}
+
+
+/* Expense */
+
+.expense-text{
+
+    color:#64B5F6;
+
+}
+
+
+/*============================
+     GLASS SHINE
+=============================*/
+
+.transaction-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.transaction-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:50%;
+
+    top:-80px;
+
+    right:-70px;
+
+}
+
+
+/*============================
+      ACTIVE EFFECT
+=============================*/
+
+.transaction-item:active{
+
+    transform:scale(.98);
+
+}
+
+
+/*============================
+     LOAD ANIMATION
+=============================*/
+
+.transaction-item{
+
+    animation:fadeUp .8s ease;
+
+}
+/*====================================================
+
+            FINPAY DASHBOARD CSS V2
+                  PART 7
+
+    FAB • BOTTOM NAVIGATION • RESPONSIVE
+
+====================================================*/
+
+
+/*============================
+      FLOATING ACTION BUTTON
+=============================*/
+
+.fab{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:90px;
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #00C853,
+        #00E676
+    );
+
+    color:#ffffff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    box-shadow:0 20px 40px rgba(0,200,83,.35);
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.fab:hover{
+
+    transform:scale(1.08);
+
+}
+
+.fab:active{
+
+    transform:scale(.96);
+
+}
+
+
+/*============================
+      BOTTOM NAVIGATION
+=============================*/
+
+.bottom-nav{
+
+    display:none;
+
+}
+
+
+/*============================
+      CUSTOM SCROLLBAR
+=============================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#014421;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00C853;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#00E676;
+
+}
+
+
+/*============================
+      TABLET
+=============================*/
+
+@media (max-width:992px){
+
+.sidebar{
+
+    width:85px;
+
+}
+
+.sidebar .logo h2{
+
+    display:none;
+
+}
+
+.sidebar li span{
+
+    display:none;
+
+}
+
+.sidebar li{
+
+    justify-content:center;
+
+}
+
+.content{
+
+    margin-left:85px;
+
+    width:calc(100% - 85px);
+
+}
+
+.balance-card{
+
+    grid-template-columns:1fr;
+
+}
+
+.action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.analytics-card{
+
+    grid-template-columns:1fr;
+
+}
+
+.slider{
+
+    width:340px;
+
+}
+
+.bank-card{
+
+    min-width:340px;
+
+}
+
+}
+
+
+/*============================
+      MOBILE
+=============================*/
+
+@media (max-width:768px){
+
+.sidebar{
+
+    display:none;
+
+}
+
+.content{
+
+    margin-left:0;
+
+    width:100%;
+
+    padding:20px;
+
+}
+
+.topbar{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.profile{
+
+    width:100%;
+
+    justify-content:space-between;
+
+}
+
+.balance-card{
+
+    padding:25px;
+
+}
+
+.balance-row h2{
+
+    font-size:32px;
+
+}
+
+.account-info{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.slider{
+
+    width:300px;
+
+}
+
+.bank-card{
+
+    min-width:300px;
+
+    height:200px;
+
+}
+
+.card-number{
+
+    font-size:18px;
+
+}
+
+.action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.transaction-item{
+
+    padding:16px;
+
+}
+
+.transaction-info h3{
+
+    font-size:16px;
+
+}
+
+.transaction-info p{
+
+    font-size:12px;
+
+}
+
+.transaction-amount{
+
+    font-size:16px;
+
+}
+
+.bottom-nav{
+
+    position:fixed;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:75px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    z-index:1000;
+
+}
+
+.bottom-nav a{
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    font-size:12px;
+
+    transition:.3s;
+
+}
+
+.bottom-nav a i{
+
+    font-size:20px;
+
+    margin-bottom:5px;
+
+}
+
+.bottom-nav a.active{
+
+    color:#00E676;
+
+}
+
+.fab{
+
+    bottom:95px;
+
+    right:20px;
+
+}
+
+}
+
+
+/*============================
+      SMALL PHONES
+=============================*/
+
+@media (max-width:480px){
+
+.topbar h1{
+
+    font-size:28px;
+
+}
+
+.balance-row h2{
+
+    font-size:26px;
+
+}
+
+.slider{
+
+    width:270px;
+
+}
+
+.bank-card{
+
+    min-width:270px;
+
+    padding:20px;
+
+}
+
+.card-number{
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+}
+
+.action-grid{
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+}
+
+.analytics-card{
+
+    padding:20px;
+
+}
+
+.chart{
+
+    height:250px;
+
+}
+
+.transaction-item{
+
+    gap:12px;
+
+}
+
+.transaction-icon{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:18px;
+
+}
+
+.fab{
+
+    width:58px;
+
+    height:58px;
+
+    font-size:22px;
+
+}
+
+h2{
+    color: #ffffff;
+    font-weight: 700;
+}
+
+#accountName,
+#cardAccountName{
+    color:#ffffff;
+    font-weight:700;
+}
+
+.welcome-text{
+    color: rgba(255,255,255,.75);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.welcome-text #username{
+    color: #ffffff;
+    font-weight: 700;
+}

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FinPay | Transfer</title>
+
+    <link rel="stylesheet" href="transfer.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="transfer-page">
+
+    <!-- ===========================
+             SIDEBAR
+    ============================ -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img src="finpay images/finpay.png"
+
+        </div>
+
+        <ul>
+ 
+            <li onclick="location.href='dashboard.html'">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Home</span>
+
+            </li>
+
+            <li onclick="location.href='account.html'">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <span>Accounts</span>
+
+            </li>
+
+ <li onclick="location.href='transfer.html'">
+
+                <i class="fa-solid fa-money-bill-transfer"></i>
+
+                <span>Transfer</span>
+
+            </li>
+
+            <li onclick="location.href='cards.html'">
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>Cards</span>
+
+            </li>
+
+            <li onclick="location.href='analytics.html'">
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <span>Analytics</span>
+
+            </li>
+
+            <li onclick="location.href='settings.html'">
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Settings</span>
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- ===========================
+           MAIN CONTENT
+    ============================ -->
+
+    <main class="content">
+
+        <div class="topbar">
+
+            <div>
+
+                <h1>Transfer Money</h1>
+
+                <p>Send money quickly and securely.</p>
+
+            </div>
+
+            <div class="profile">
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+                <img src="finpay images/avatar.png"
+                     alt="Profile">
+
+            </div>
+
+        </div>
+
+        <!-- ===========================
+              TRANSFER SECTION
+        ============================ -->
+
+        <div class="transfer-section">
+
+            <div class="transfer-card">
+
+                <div class="section-title">
+
+                    <h2>New Transfer</h2>
+
+                    <p>Complete the form below to send money.</p>
+
+                </div>
+                                <form id="transferForm">
+
+                    <div class="input-group">
+
+                        <label>Recipient Name</label>
+
+                        <input
+                            type="text"
+                            id="recipientName"
+                            placeholder="Enter recipient's full name"
+                            required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Account Number</label>
+
+                        <input
+                            type="number"
+                            id="accountNumber"
+                            placeholder="10-digit account number"
+                            maxlength="10"
+                            required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Select Bank</label>
+
+                        <select id="bankName" required>
+
+                            <option value="">Choose Bank</option>
+
+                            <option>Access Bank</option>
+
+                            <option>GTBank</option>
+
+                            <option>First Bank</option>
+
+                            <option>UBA</option>
+
+                            <option>Zenith Bank</option>
+
+                            <option>Fidelity Bank</option>
+
+                            <option>Union Bank</option>
+
+                            <option>Stanbic IBTC</option>
+
+                            <option>Sterling Bank</option>
+
+                            <option>Opay</option>
+
+                            <option>Palmpay</option>
+
+                            <option>Kuda Bank</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Amount (₦)</label>
+
+                        <input
+                            type="number"
+                            id="transferAmount"
+                            placeholder="₦0.00"
+                            required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Narration</label>
+
+                        <textarea
+                            id="narration"
+                            placeholder="What's this payment for?"></textarea>
+
+                    </div>
+
+                </form>
+
+            </div>
+                        <div class="transfer-summary">
+
+                <h3>Transfer Summary</h3>
+
+                <div class="summary-item">
+
+                    <span>Transfer Fee</span>
+
+                    <strong>₦10.00</strong>
+
+                </div>
+
+                <div class="summary-item">
+
+                    <span>Daily Limit</span>
+
+                    <strong>₦5,000,000</strong>
+
+                </div>
+
+                <div class="summary-item total">
+
+                    <span>Total Debit</span>
+
+                    <strong id="totalDebit">₦0.00</strong>
+
+                </div>
+
+            </div>
+
+            <button
+                class="transfer-btn"
+                id="sendMoneyBtn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Send Money
+
+            </button>
+
+            <div class="secure-note">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <span>
+
+                    Your transaction is protected with bank-level encryption.
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="recent-recipients">
+
+            <div class="section-title">
+
+                <h2>Recent Recipients</h2>
+
+                <a href="#">View All</a>
+
+            </div>
+
+            <div class="recipient-list">
+                              <div class="recipient-card">
+
+                    <img src="finpay images/user1.jpg" alt="David">
+
+                    <h4>David A.</h4>
+
+                    <small>GTBank</small>
+
+                </div>
+
+                <div class="recipient-card">
+
+                    <img src="finpay images/user2.jpg" alt="Grace">
+
+                    <h4>Grace O.</h4>
+
+                    <small>Access Bank</small>
+
+                </div>
+
+                <div class="recipient-card">
+
+                    <img src="finpay images/user3.jpg" alt="Michael">
+
+                    <h4>Michael K.</h4>
+
+                    <small>UBA</small>
+
+                </div>
+
+                <div class="recipient-card">
+
+                    <img src="finpay images/user4.jpg" alt="Sarah">
+
+                    <h4>Sarah J.</h4>
+
+                    <small>Zenith Bank</small>
+
+                </div>
+
+            </div>
+
+        </div>
+<section class="recent-transfers">
+
+        <div class="section-title">
+
+            <h2>Recent Transfers</h2>
+
+            <a href="#">View All</a>
+
+        </div>
+
+        <div class="transfer-item">
+
+            <div class="transfer-icon">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </div>
+
+            <div class="transfer-info">
+
+                <h3>David A.</h3>
+
+                <p>Today • 10:25 AM</p>
+
+            </div>
+
+            <strong class="transfer-amount">-₦25,000</strong>
+
+        </div>
+
+        <div class="transfer-item">
+
+            <div class="transfer-icon">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </div>
+
+            <div class="transfer-info">
+
+                <h3>Grace O.</h3>
+
+                <p>Yesterday • 07:15 PM</p>
+
+            </div>
+
+            <strong class="transfer-amount">-₦10,500</strong>
+
+        </div>
+
+        <div class="transfer-item">
+
+            <div class="transfer-icon">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </div>
+
+            <div class="transfer-info">
+
+                <h3>Michael K.</h3>
+
+                <p>Yesterday • 01:40 PM</p>
+
+            </div>
+
+            <strong class="transfer-amount">-₦75,000</strong>
+
+        </div>
+
+    </section>
+    </div>
+
+    
+
+</main>
+
+<nav class="bottom-nav">
+
+    <a href="dashboard.html">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>Home</span>
+
+    </a>
+
+    <a href="transfer.html" class="active">
+
+        <i class="fa-solid fa-money-bill-transfer"></i>
+
+        <span>Transfer</span>
+
+    </a>
+
+    <a href="cards.html">
+
+        <i class="fa-solid fa-credit-card"></i>
+
+        <span>Cards</span>
+
+    </a>
+
+    <a href="analytics.html">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <span>Analytics</span>
+
+    </a>
+
+    <a href="account.html">
+
+        <i class="fa-solid fa-user"></i>
+
+        <span>Profile</span>
+
+    </a>
+
+</nav>
+
+<button class="fab">
+
+    <i class="fa-solid fa-plus"></i>
+
+</button>
+
+</div>
+
+<script src="transfer.js"></script>
+
+</body>
+
+</html>

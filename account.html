@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+          
+
+    <title>Finpay | Accounts</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="account.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+          
+
+
+   <a href="account.html"></a>
+
+   <a href="transfer.html"></a>
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!--=========================
+            SIDEBAR
+    ==========================-->
+
+   <aside class="sidebar">
+
+    <div class="logo">
+
+        <img src="finpay images/finpay.png"
+             alt="Finpay Logo">
+
+        <h2>Finpay</h2>
+
+    </div>
+
+    <ul>
+
+        <li onclick="location.href='dashboard.html'">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Home</span>
+
+        </li>
+
+          <li onclick="location.href='account.html'">
+            <i class="fa-solid fa-wallet"></i>
+
+            <span>Accounts</span>
+
+        </li>
+
+           <li onclick="location.href='transfer.html'">
+
+            <i class="fa-solid fa-money-bill-transfer"></i>
+
+            <span>Transfer</span>
+
+        </li>
+            <li onclick="location.href='card.html'">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <span>Cards</span>
+
+        </li>
+
+       <li onclick="location.href='analytics.html'">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>Analytics</span>
+
+        </li>
+
+           <li onclick="location.href='settings.html'">
+
+            <i class="fa-solid fa-gear"></i>
+
+            <span>Settings</span>
+
+        </li>
+
+    </ul>
+
+</aside>
+    <!--=========================
+          MAIN CONTENT
+    ==========================-->
+
+    <main class="content">
+
+        <!--=========================
+              TOP BAR
+        ==========================-->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Accounts</h1>
+
+                <p>Manage all your Finpay accounts in one place.</p>
+
+            </div>
+
+            <div class="profile">
+
+                <button class="icon-btn">
+
+                    <i class="fa-solid fa-bell"></i>
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+                <img src="finpay images/avatar.png"
+                     alt="Profile">
+
+            </div>
+
+        </header>
+
+        <!--=========================
+           ACCOUNT OVERVIEW
+        ==========================-->
+
+        <section class="account-overview">
+
+            <div class="section-title">
+
+                <h2>Account Overview</h2>
+
+                <button class="add-account">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Open New Account
+
+                </button>
+
+            </div>
+
+            <div class="overview-grid">
+              <!--=========================
+      TOTAL BALANCE CARD
+==========================-->
+
+<div class="overview-card total-balance">
+
+    <div class="card-header">
+
+        <div>
+
+            <span>Total Balance</span>
+
+            <h2 id="totalBalance">₦3,285,750.35</h2>
+
+        </div>
+
+        <button id="toggleTotalBalance">
+            <i class="fa-solid fa-eye"></i>
+
+        </button>
+
+    </div>
+
+    <div class="balance-footer">
+
+        <div>
+
+            <small>Active Accounts</small>
+
+            <h4>4</h4>
+
+        </div>
+
+        <div>
+
+            <small>Monthly Growth</small>
+
+            <h4>+12.8%</h4>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--=========================
+      SAVINGS ACCOUNT
+==========================-->
+
+<div class="overview-card">
+
+    <div class="account-top">
+
+        <i class="fa-solid fa-piggy-bank"></i>
+
+        <span>Savings Account</span>
+
+    </div>
+
+    <h3>₦1,845,320.20</h3>
+
+    <p>Account No.</p>
+
+    <strong>2045678910</strong>
+
+</div>
+
+<!--=========================
+      CURRENT ACCOUNT
+==========================-->
+
+<div class="overview-card">
+
+    <div class="account-top">
+
+        <i class="fa-solid fa-building-columns"></i>
+
+        <span>Current Account</span>
+
+    </div>
+
+    <h3>₦985,430.15</h3>
+
+    <p>Account No.</p>
+
+    <strong>2045678921</strong>
+
+</div>
+
+<!--=========================
+      DOLLAR ACCOUNT
+==========================-->
+
+<div class="overview-card">
+
+    <div class="account-top">
+
+        <i class="fa-solid fa-dollar-sign"></i>
+
+        <span>Dollar Account</span>
+
+    </div>
+
+    <h3>$2,450.00</h3>
+
+    <p>Account No.</p>
+
+    <strong>USD20456789</strong>
+
+</div>
+
+<!--=========================
+      FIXED DEPOSIT
+==========================-->
+
+<div class="overview-card">
+
+    <div class="account-top">
+
+        <i class="fa-solid fa-vault"></i>
+
+        <span>Fixed Deposit</span>
+
+    </div>
+
+    <h3>₦455,000.00</h3>
+
+    <p>Maturity Date</p>
+
+    <strong>18 Dec 2026</strong>
+
+</div>
+
+</div>
+
+<!--=========================
+      QUICK ACTIONS
+==========================-->
+
+<section class="account-actions">
+
+    <div class="section-title">
+
+        <h2>Quick Actions</h2>
+
+    </div>
+
+    <div class="action-grid">
+      <!--=========================
+        QUICK ACTIONS
+==========================-->
+
+<div class="action-card">
+
+    <i class="fa-solid fa-arrow-down"></i>
+
+    <span>Deposit</span>
+
+</div>
+
+<div class="action-card">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+    <span>Withdraw</span>
+
+</div>
+
+<div class="action-card">
+
+    <i class="fa-solid fa-file-lines"></i>
+
+    <span>Statement</span>
+
+</div>
+
+<div class="action-card">
+
+    <i class="fa-solid fa-gear"></i>
+
+    <span>Manage</span>
+
+</div>
+
+<div class="action-card">
+
+    <i class="fa-solid fa-money-check-dollar"></i>
+
+    <span>Cheque Book</span>
+
+</div>
+
+<div class="action-card">
+
+    <i class="fa-solid fa-file-arrow-down"></i>
+
+    <span>Download</span>
+
+</div>
+
+<div class="action-card">
+
+    <i class="fa-solid fa-chart-line"></i>
+
+    <span>Interest</span>
+
+</div>
+
+<div class="action-card">
+
+    <i class="fa-solid fa-plus"></i>
+
+    <span>New Account</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!--=========================
+        RECENT ACCOUNTS
+==========================-->
+
+<section class="recent-accounts">
+
+<div class="section-title">
+
+<h2>My Accounts</h2>
+
+<a href="#">View All</a>
+
+</div>
+
+<div class="accounts-table">
+
+<div class="table-head">
+
+<span>Account</span>
+
+<span>Type</span>
+
+<span>Status</span>
+
+<span>Balance</span>
+
+</div>
+
+<!-- Account 1 -->
+
+<div class="table-row">
+
+<span>2045678910</span>
+
+<span>Savings</span>
+
+<span class="active-status">
+
+Active
+
+</span>
+
+<span>₦1,845,320.20</span>
+
+</div>
+
+<!-- Account 2 -->
+
+<div class="table-row">
+
+<span>2045678921</span>
+
+<span>Current</span>
+
+<span class="active-status">
+
+Active
+
+</span>
+
+<span>₦985,430.15</span>
+
+</div>
+
+<!-- Account 3 -->
+
+<div class="table-row">
+
+<span>USD20456789</span>
+
+<span>Dollar</span>
+
+<span class="active-status">
+
+Active
+
+</span>
+
+<span>$2,450.00</span>
+
+</div>
+
+<!-- Account 4 -->
+
+<div class="table-row">
+
+<span>FD20456701</span>
+
+<span>Fixed Deposit</span>
+
+<span class="pending-status">
+
+Locked
+
+</span>
+
+<span>₦455,000.00</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!--=========================
+      ACCOUNT INSIGHTS
+==========================-->
+
+<section class="account-insights">
+
+<div class="section-title">
+
+<h2>Account Insights</h2>
+
+<a href="#">Monthly Report</a>
+
+</div>
+
+<div class="insight-card">
+
+<canvas id="accountsChart"></canvas>
+
+</div>
+
+</section>
+<!--=========================
+      RECENT ACTIVITY
+==========================-->
+
+<section class="recent-activity">
+
+    <div class="section-title">
+
+        <h2>Recent Activity</h2>
+
+        <a href="#">View All</a>
+
+    </div>
+
+    <div class="activity-list">
+
+        <div class="activity-item">
+
+            <div class="activity-icon income">
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </div>
+
+            <div class="activity-info">
+
+                <h3>Salary Credit</h3>
+
+                <p>Today • 09:30 AM</p>
+
+            </div>
+
+            <div class="activity-amount income-text">
+
+                +₦150,000
+
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon expense">
+
+                <i class="fa-solid fa-arrow-up"></i>
+
+            </div>
+
+            <div class="activity-info">
+
+                <h3>ATM Withdrawal</h3>
+
+                <p>Yesterday • 05:15 PM</p>
+
+            </div>
+
+            <div class="activity-amount expense-text">
+
+                -₦20,000
+
+            </div>
+
+        </div>
+
+        <div class="activity-item">
+
+            <div class="activity-icon income">
+
+                <i class="fa-solid fa-building-columns"></i>
+
+            </div>
+
+            <div class="activity-info">
+
+                <h3>Bank Deposit</h3>
+
+                <p>28 June 2026</p>
+
+            </div>
+
+            <div class="activity-amount income-text">
+
+                +₦50,000
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================
+      FLOATING BUTTON
+==========================-->
+
+<button class="fab">
+
+    <i class="fa-solid fa-plus"></i>
+
+</button>
+
+<!--=========================
+      MOBILE NAVIGATION
+==========================-->
+
+<nav class="bottom-nav">
+
+    <a href="dashboard.html">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>Home</span>
+
+    </a>
+
+    <a href="accounts.html" class="active">
+
+        <i class="fa-solid fa-wallet"></i>
+
+        <span>Accounts</span>
+
+    </a>
+
+    <a href="transfer.html">
+
+        <i class="fa-solid fa-money-bill-transfer"></i>
+
+        <span>Transfer</span>
+
+    </a>
+
+    <a href="cards.html">
+
+        <i class="fa-solid fa-credit-card"></i>
+
+        <span>Cards</span>
+
+    </a>
+
+    <a href="profile.html">
+
+        <i class="fa-solid fa-user"></i>
+
+        <span>Profile</span>
+
+    </a>
+
+</nav>
+
+</main>
+
+</div>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="accountsChart"></canvas>
+<!-- JavaScript -->
+
+<script src="account.js"></script>
+
+</body>
+
+</html>

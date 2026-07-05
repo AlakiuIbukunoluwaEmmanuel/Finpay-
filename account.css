@@ -1,0 +1,1709 @@
+/*====================================================
+
+            FINPAY ACCOUNTS CSS V1
+                  PART 1
+
+      RESET • BACKGROUND • LAYOUT
+
+====================================================*/
+
+
+/*============================
+            RESET
+=============================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #014421,
+        #00A651,
+        #00C853,
+        #ffffff
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 18s ease infinite;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+}
+
+
+/*============================
+    BACKGROUND ANIMATION
+=============================*/
+
+@keyframes bgMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+
+/*============================
+        MAIN LAYOUT
+=============================*/
+
+.dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+
+/*============================
+          SIDEBAR
+=============================*/
+
+.sidebar{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:250px;
+
+    height:100vh;
+
+    padding:25px 18px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-right:1px solid rgba(255,255,255,.12);
+
+    z-index:1000;
+
+}
+
+
+/*============================
+            LOGO
+=============================*/
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:45px;
+
+}
+
+.logo img{
+
+    width:48px;
+
+    height:48px;
+
+    object-fit:contain;
+
+}
+
+.logo h2{
+
+    color:#ffffff;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+
+/*============================
+      SIDEBAR MENU
+=============================*/
+
+.sidebar ul{
+
+    list-style:none;
+
+}
+
+.sidebar li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:15px 18px;
+
+    margin-bottom:12px;
+
+    border-radius:18px;
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.sidebar li i{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+.sidebar li span{
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.sidebar li:hover{
+
+    background:rgba(255,255,255,.12);
+
+    transform:translateX(6px);
+
+}
+
+.sidebar li.active{
+
+    background:linear-gradient(
+        135deg,
+        #00C853,
+        #00E676
+    );
+
+    box-shadow:0 10px 25px rgba(0,200,83,.25);
+
+}
+
+
+/*============================
+        CONTENT
+=============================*/
+
+.content{
+
+    flex:1;
+
+    margin-left:250px;
+
+    padding:35px;
+
+}
+
+
+/*============================
+      SECTION TITLE
+=============================*/
+
+.section-title{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    color:#ffffff;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.section-title a{
+
+    color:#D9FFE7;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.section-title a:hover{
+
+    color:#ffffff;
+
+}
+
+
+/*============================
+       GLASS EFFECT
+=============================*/
+
+.glass{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:25px;
+
+}
+
+
+/*============================
+      FADE ANIMATION
+=============================*/
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+/*====================================================
+
+            FINPAY ACCOUNTS CSS V1
+                  PART 2
+
+     HEADER • OVERVIEW • ACCOUNT CARDS
+
+====================================================*/
+
+
+/*============================
+          TOP BAR
+=============================*/
+
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topbar h1{
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:700;
+
+}
+
+.topbar p{
+
+    color:rgba(255,255,255,.75);
+
+    margin-top:6px;
+
+    font-size:15px;
+
+}
+
+
+/*============================
+        PROFILE
+=============================*/
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.icon-btn{
+
+    position:relative;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(15px);
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.icon-btn:hover{
+
+    background:#00C853;
+
+    transform:translateY(-3px);
+
+}
+
+.notification-dot{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#ff3b30;
+
+    border:2px solid #ffffff;
+
+}
+
+.profile img{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    border:3px solid #00E676;
+
+}
+
+
+/*============================
+      ACCOUNT OVERVIEW
+=============================*/
+
+.account-overview{
+
+    margin-bottom:40px;
+
+}
+
+.add-account{
+
+    border:none;
+
+    padding:12px 22px;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        #00C853,
+        #00E676
+    );
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.add-account:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(0,200,83,.30);
+
+}
+
+
+/*============================
+      OVERVIEW GRID
+=============================*/
+
+.overview-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:22px;
+
+}
+
+
+/*============================
+      OVERVIEW CARD
+=============================*/
+
+.overview-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    padding:25px;
+
+    transition:.35s;
+
+}
+
+.overview-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+
+}
+
+
+/*============================
+    TOTAL BALANCE CARD
+=============================*/
+
+.total-balance{
+
+    grid-column:span 2;
+
+    background:linear-gradient(
+        135deg,
+        rgba(0,200,83,.28),
+        rgba(255,255,255,.12)
+    );
+
+}
+
+.card-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.card-header span{
+
+    color:rgba(255,255,255,.75);
+
+    font-size:14px;
+
+}
+
+.card-header h2{
+
+    color:#ffffff;
+
+    font-size:38px;
+
+    margin-top:8px;
+
+}
+
+#toggleTotalBalance{
+
+    position:relative;
+
+    z-index:10;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.12);
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+}
+
+#toggleTotalBalance:hover{
+
+    background:#00C853;
+
+}
+
+
+/*============================
+      BALANCE FOOTER
+=============================*/
+
+.balance-footer{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:25px;
+
+}
+
+.balance-footer small{
+
+    color:rgba(255,255,255,.70);
+
+}
+
+.balance-footer h4{
+
+    color:#ffffff;
+
+    margin-top:5px;
+
+}
+
+
+/*============================
+      ACCOUNT CARD
+=============================*/
+
+.account-top{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:20px;
+
+}
+
+.account-top i{
+
+    width:50px;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(0,230,118,.15);
+
+    color:#00E676;
+
+    font-size:22px;
+
+}
+
+.account-top span{
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+.overview-card h3{
+
+    color:#ffffff;
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+}
+
+.overview-card p{
+
+    color:rgba(255,255,255,.70);
+
+    font-size:13px;
+
+}
+
+.overview-card strong{
+
+    display:block;
+
+    color:#ffffff;
+
+    margin-top:6px;
+
+    font-size:16px;
+
+    letter-spacing:1px;
+
+}
+/*====================================================
+
+            FINPAY ACCOUNTS CSS V1
+                  PART 3
+
+      QUICK ACTIONS • ACCOUNTS TABLE
+
+====================================================*/
+
+
+/*============================
+        QUICK ACTIONS
+=============================*/
+
+.account-actions{
+
+    margin-bottom:40px;
+
+}
+
+
+/*============================
+        ACTION GRID
+=============================*/
+
+.action-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+
+/*============================
+        ACTION CARD
+=============================*/
+
+.action-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    padding:28px 18px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.action-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(0,200,83,.18);
+
+    box-shadow:0 18px 35px rgba(0,200,83,.25);
+
+}
+
+.action-card i{
+
+    font-size:34px;
+
+    color:#00E676;
+
+    margin-bottom:18px;
+
+}
+
+.action-card span{
+
+    display:block;
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+/*============================
+        ACCOUNTS TABLE
+=============================*/
+
+.recent-accounts{
+
+    margin-bottom:40px;
+
+}
+
+.accounts-table{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+}
+
+
+/*============================
+        TABLE HEADER
+=============================*/
+
+.table-head{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    padding:20px 25px;
+
+    background:rgba(255,255,255,.08);
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+
+/*============================
+         TABLE ROW
+=============================*/
+
+.table-row{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    align-items:center;
+
+    padding:20px 25px;
+
+    color:#ffffff;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    transition:.30s;
+
+}
+
+.table-row:hover{
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.table-row span{
+
+    font-size:15px;
+
+}
+
+
+/*============================
+      STATUS BADGES
+=============================*/
+
+.active-status{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:90px;
+
+    padding:7px 12px;
+
+    border-radius:20px;
+
+    background:rgba(0,230,118,.15);
+
+    color:#00E676;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.pending-status{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:90px;
+
+    padding:7px 12px;
+
+    border-radius:20px;
+
+    background:rgba(255,193,7,.15);
+
+    color:#FFD54F;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+/*====================================================
+
+            FINPAY ACCOUNTS CSS V1
+                  PART 4
+
+   INSIGHTS • ACTIVITY • FAB • RESPONSIVE
+
+====================================================*/
+
+
+/*============================
+      ACCOUNT INSIGHTS
+=============================*/
+
+.account-insights{
+
+    margin-bottom:40px;
+
+}
+
+.insight-card{
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:24px;
+
+    padding:25px;
+
+    height:340px;
+
+}
+
+#accountsChart{
+
+    width:100% !important;
+
+    height:100% !important;
+
+}
+
+
+/*============================
+      RECENT ACTIVITY
+=============================*/
+
+.recent-activity{
+
+    margin-bottom:90px;
+
+}
+
+.activity-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.activity-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:18px 22px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:22px;
+
+    transition:.35s;
+
+}
+
+.activity-item:hover{
+
+    transform:translateY(-5px);
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.activity-icon{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.activity-icon.income{
+
+    background:linear-gradient(
+        135deg,
+        #00C853,
+        #00E676
+    );
+
+}
+
+.activity-icon.expense{
+
+    background:linear-gradient(
+        135deg,
+        #2196F3,
+        #64B5F6
+    );
+
+}
+
+.activity-info{
+
+    flex:1;
+
+    margin-left:18px;
+
+}
+
+.activity-info h3{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    margin-bottom:5px;
+
+}
+
+.activity-info p{
+
+    color:rgba(255,255,255,.70);
+
+    font-size:14px;
+
+}
+
+.activity-amount{
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+.income-text{
+
+    color:#00E676;
+
+}
+
+.expense-text{
+
+    color:#64B5F6;
+
+}
+
+
+/*============================
+     FLOATING BUTTON
+=============================*/
+
+.fab{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:90px;
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        #00C853,
+        #00E676
+    );
+
+    color:#ffffff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    box-shadow:0 20px 40px rgba(0,200,83,.35);
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.fab:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+/*============================
+     BOTTOM NAVIGATION
+=============================*/
+
+.bottom-nav{
+
+    display:none;
+
+}
+
+
+/*============================
+       SCROLLBAR
+=============================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#00C853;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#014421;
+
+}
+
+
+/*============================
+       TABLET
+=============================*/
+
+@media(max-width:992px){
+
+.sidebar{
+
+    width:85px;
+
+}
+
+.sidebar .logo h2,
+
+.sidebar li span{
+
+    display:none;
+
+}
+
+.sidebar li{
+
+    justify-content:center;
+
+}
+
+.content{
+
+    margin-left:85px;
+
+}
+
+.total-balance{
+
+    grid-column:span 1;
+
+}
+
+.action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+
+/*============================
+        MOBILE
+=============================*/
+
+@media(max-width:768px){
+
+.sidebar{
+
+    display:none;
+
+}
+
+.content{
+
+    margin-left:0;
+
+    padding:20px;
+
+}
+
+.topbar{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:20px;
+
+}
+
+.profile{
+
+    width:100%;
+
+    justify-content:space-between;
+
+}
+
+.overview-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.action-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.table-head{
+
+    display:none;
+
+}
+
+.table-row{
+
+    grid-template-columns:1fr;
+
+    gap:10px;
+
+}
+
+.activity-item{
+
+    padding:16px;
+
+}
+
+.bottom-nav{
+
+    position:fixed;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    height:75px;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border-top:1px solid rgba(255,255,255,.12);
+
+    z-index:1000;
+
+}
+
+.bottom-nav a{
+
+    text-decoration:none;
+
+    color:#ffffff;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    font-size:12px;
+
+}
+
+.bottom-nav a i{
+
+    font-size:20px;
+
+    margin-bottom:4px;
+
+}
+
+.bottom-nav a.active{
+
+    color:#00E676;
+
+}
+
+.fab{
+
+    right:20px;
+
+    bottom:95px;
+
+}
+
+}
+
+
+/*============================
+      SMALL PHONES
+=============================*/
+
+@media(max-width:480px){
+
+.topbar h1{
+
+    font-size:28px;
+
+}
+
+.card-header h2{
+
+    font-size:28px;
+
+}
+
+.action-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.overview-card{
+
+    padding:20px;
+
+}
+
+.insight-card{
+
+    height:260px;
+
+}
+
+.activity-icon{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:18px;
+
+}
+
+.activity-info h3{
+
+    font-size:16px;
+
+}
+
+.activity-amount{
+
+    font-size:16px;
+
+}
+
+.fab{
+
+    width:58px;
+
+    height:58px;
+
+    font-size:22px;
+
+}
+
+}
+/*====================================================
+
+            FINPAY ACCOUNTS CSS V1
+                  PART 5
+
+      PREMIUM EFFECTS & FINAL POLISH
+
+====================================================*/
+
+
+/*============================
+      CARD ANIMATIONS
+=============================*/
+
+.overview-card,
+.action-card,
+.activity-item,
+.insight-card,
+.accounts-table{
+
+    animation:fadeIn .8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*============================
+      GLASS REFLECTION
+=============================*/
+
+.overview-card,
+.action-card,
+.insight-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.overview-card::before,
+.action-card::before,
+.insight-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    pointer-events:none;
+
+    width:180px;
+
+    height:180px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50%;
+
+    top:-70px;
+
+    right:-70px;
+
+}
+
+
+/*============================
+      HOVER EFFECTS
+=============================*/
+
+.overview-card:hover,
+.insight-card:hover,
+.accounts-table:hover{
+
+    box-shadow:0 20px 40px rgba(0,200,83,.18);
+
+}
+
+.activity-item:hover{
+
+    border-color:rgba(0,230,118,.35);
+
+}
+
+
+/*============================
+      BUTTON EFFECTS
+=============================*/
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+
+/*============================
+       LINK EFFECTS
+=============================*/
+
+a{
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    opacity:.85;
+
+}
+
+
+/*============================
+      SELECTION COLOR
+=============================*/
+
+::selection{
+
+    background:#00C853;
+
+    color:#ffffff;
+
+}
+
+
+/*============================
+        FOCUS STATE
+=============================*/
+
+button:focus,
+a:focus{
+
+    outline:2px solid #00E676;
+
+    outline-offset:3px;
+
+}
+
+
+/*============================
+      ICON ANIMATION
+=============================*/
+
+.action-card i,
+.activity-icon i{
+
+    transition:.35s;
+
+}
+
+.action-card:hover i{
+
+    transform:rotate(10deg) scale(1.15);
+
+}
+
+
+/*============================
+      BALANCE GLOW
+=============================*/
+
+.total-balance{
+
+    box-shadow:
+
+        0 0 35px rgba(0,200,83,.18);
+
+}
+
+
+/*============================
+     SMOOTH TRANSITIONS
+=============================*/
+
+*{
+
+    transition:
+
+        background .3s,
+
+        color .3s,
+
+        border-color .3s,
+
+        transform .3s,
+
+        box-shadow .3s;
+
+}

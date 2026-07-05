@@ -1,0 +1,1968 @@
+
+:root {
+    --finpay-green: #19c37d; /* adjust if your dashboard uses a slightly different one */
+    --finpay-green-dark: #12a86a;
+}
+
+/*========================================================
+
+                FINPAY LOGIN CSS
+                  VERSION 2.0
+
+=========================================================*/
+
+
+/*========================
+        RESET
+=========================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: radial-gradient(
+        circle at top left,
+        #19c37d 100%,
+        #c9f5de 65%,
+        #e6fff2 35%,
+        #f2fdf7 0%
+    );
+}
+
+    background-size:300% 300%;
+
+    animation:gradientMove 15s ease infinite;
+
+}
+
+
+/*========================
+   BACKGROUND ANIMATION
+=========================*/
+
+@keyframes gradientMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+
+/*========================
+    BACKGROUND LAYER
+=========================*/
+
+.background{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+}
+
+
+/*========================
+      FLOATING LOGOS
+=========================*/
+
+.logo{
+
+    position:absolute;
+
+    opacity:.12;
+
+    pointer-events:none;
+
+    user-select:none;
+
+}
+
+.logo img{
+
+    width:140px;
+
+    border-radius:12px;
+
+    filter:
+
+    drop-shadow(0 0 20px rgba(0,200,83,.15));
+
+}
+
+
+/*========================
+      LOGO SIZES
+=========================*/
+
+.one img{
+
+width:190px;
+
+}
+
+.two img{
+
+width:90px;
+
+}
+
+.three img{
+
+width:150px;
+
+}
+
+.four img{
+
+width:220px;
+
+}
+
+.five img{
+
+width:120px;
+
+}
+
+.six img{
+
+width:70px;
+
+}
+
+.seven img{
+
+width:170px;
+
+}
+
+.eight img{
+
+width:110px;
+
+}
+
+
+/*========================
+      POSITIONS
+=========================*/
+
+.one{
+
+top:4%;
+
+left:5%;
+
+}
+
+.two{
+
+top:15%;
+
+right:6%;
+
+}
+
+.three{
+
+top:38%;
+
+left:12%;
+
+}
+
+.four{
+
+top:68%;
+
+right:8%;
+
+}
+
+.five{
+
+bottom:10%;
+
+left:28%;
+
+}
+
+.six{
+
+bottom:6%;
+
+right:38%;
+
+}
+
+.seven{
+
+top:55%;
+
+left:60%;
+
+}
+
+.eight{
+
+top:8%;
+
+left:78%;
+
+}
+/*========================
+     FLOAT ANIMATIONS
+=========================*/
+
+.float{
+
+animation:floatUpDown 9s ease-in-out infinite;
+
+}
+
+.drift{
+
+animation:driftSide 15s ease-in-out infinite;
+
+}
+
+.diagonal{
+
+animation:driftDiagonal 18s ease-in-out infinite;
+
+}
+
+.spin{
+
+animation:rotateSlow 35s linear infinite;
+
+}
+
+.spinFloat{
+
+animation:
+
+rotateSlow 35s linear infinite,
+
+floatUpDown 8s ease-in-out infinite;
+
+}
+
+
+/*========================
+      KEYFRAMES
+=========================*/
+
+@keyframes floatUpDown{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-35px);
+
+}
+
+}
+
+@keyframes driftSide{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+25%{
+
+transform:translate(20px,-10px);
+
+}
+
+50%{
+
+transform:translate(45px,15px);
+
+}
+
+75%{
+
+transform:translate(15px,30px);
+
+}
+
+100%{
+
+transform:translate(0,0);
+
+}
+
+}
+
+@keyframes driftDiagonal{
+
+0%{
+
+transform:translate(0,0);
+
+}
+
+50%{
+
+transform:translate(55px,-35px);
+
+}
+
+100%{
+
+transform:translate(0,0);
+
+}
+
+}
+
+@keyframes rotateSlow{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+/*========================================================
+
+        LOGIN CARD
+
+=========================================================*/
+
+.login-card {
+    width: 380px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.22);
+    
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(25, 195, 125, 0.15);
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.10);
+}
+
+/*====================================
+        GLOWING BACKGROUND
+=====================================*/
+
+.login-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    background:#00C853;
+
+    opacity:.18;
+
+    border-radius:50%;
+
+    filter:blur(130px);
+
+    top:-140px;
+
+    left:-140px;
+
+    animation:greenGlow 10s ease-in-out infinite;
+
+    z-index:-2;
+
+}
+
+.login-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    background:#00E676;
+
+    opacity:.15;
+
+    border-radius:50%;
+
+    filter:blur(110px);
+
+    right:-100px;
+
+    bottom:-100px;
+
+    animation:greenGlow2 12s ease-in-out infinite;
+
+    z-index:-2;
+
+}
+
+
+/*====================================
+      TOP LOGO
+=====================================*/
+
+.top-logo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.top-logo img{
+
+    width:90px;
+
+    margin-bottom:12px;
+
+    animation:logoFloat 4s ease-in-out infinite;
+
+}
+
+.top-logo h1{
+
+    color:white;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+/*====================================
+      TEXT
+=====================================*/
+
+.login-card h2{
+
+    color:white;
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+    font-size:28px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:rgba(255,255,255,.75);
+
+    font-size:15px;
+
+    margin-bottom:30px;
+
+}
+
+
+/*====================================
+      ANIMATIONS
+=====================================*/
+
+@keyframes cardFade{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@keyframes logoFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+filter:drop-shadow(0 0 12px #00C853);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+filter:drop-shadow(0 0 28px #00E676);
+
+}
+
+}
+
+@keyframes greenGlow{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+}
+
+@keyframes greenGlow2{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-30px);
+
+}
+
+}
+.login-card::before{
+    border:1px solid rgba(255,255,255,.08);
+}
+/*========================================================
+
+            INPUTS & FORM
+
+=========================================================*/
+
+form{
+
+    width:100%;
+
+}
+
+
+/*========================
+        LABELS
+=========================*/
+
+label{
+
+    display:block;
+
+    color:#ffffff;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    margin-bottom:8px;
+
+    margin-top:18px;
+
+}
+
+
+/*========================
+      INPUT CONTAINER
+=========================*/
+
+.input-box{
+
+    width:100%;
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 18px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.4s;
+
+}
+
+.input-box:hover{
+
+    border-color:#00C853;
+
+    box-shadow:
+
+    0 0 18px rgba(0,200,83,.25);
+
+}
+
+.input-box:focus-within{
+
+    border-color:#00E676;
+
+    box-shadow:
+
+    0 0 28px rgba(0,230,118,.40);
+
+}
+
+
+/*========================
+          ICONS
+=========================*/
+
+.input-box i{
+
+    color:#7DFFB5;
+
+    font-size:18px;
+
+}
+
+
+/*========================
+          INPUT
+=========================*/
+
+.input-box input{
+
+    flex:1;
+
+    height:100%;
+
+    margin-left:15px;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.input-box input::placeholder{
+
+    color:rgba(255,255,255,.60);
+
+}
+
+
+/*========================
+      PASSWORD ICON
+=========================*/
+
+#togglePassword{
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#togglePassword:hover{
+
+    color:#00E676;
+
+}
+
+
+/*========================
+   FORGOT PASSWORD
+=========================*/
+
+.password-row{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    margin-top:10px;
+
+    margin-bottom:22px;
+
+}
+
+.password-row a{
+
+    color:#00E676;
+
+    text-decoration:none;
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+.password-row a:hover{
+
+    color:#ffffff;
+
+}
+
+
+/*========================
+      LOGIN BUTTON
+=========================*/
+
+.login-btn{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #00C853,
+
+        #00A651
+
+    );
+
+    transition:.35s;
+
+}
+
+button, .login-btn {
+    background: var(--finpay-green);
+    color: white;
+    border: none;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: var(--finpay-green-dark);
+}
+/*========================================================
+
+        DIVIDER
+
+=========================================================*/
+
+.divider{
+
+    display:flex;
+
+    align-items:center;
+
+    margin:30px 0;
+
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.divider span{
+
+    padding:0 18px;
+
+    color:rgba(255,255,255,.65);
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+}
+
+
+/*========================================================
+
+        SOCIAL BUTTONS
+
+=========================================================*/
+
+.social{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.social button{
+
+    flex:1;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.social i{
+
+    margin-right:8px;
+
+}
+
+/* Google */
+
+.google{
+
+    background:#ffffff;
+
+    color:#222;
+
+}
+
+.google:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(255,255,255,.20);
+
+}
+
+/* Facebook */
+
+.facebook{
+
+    background:#1877F2;
+
+    color:#ffffff;
+
+}
+
+.facebook:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(24,119,242,.35);
+
+}
+
+
+/*========================================================
+
+        FOOTER
+
+=========================================================*/
+
+.bottom{
+
+    text-align:center;
+
+    margin-top:28px;
+
+    color:rgba(255,255,255,.75);
+
+    font-size:14px;
+
+}
+
+.bottom a{
+
+    color:#00E676;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.bottom a:hover{
+
+    color:#ffffff;
+
+}
+
+
+/*========================================================
+
+        BLUE PARTICLES
+
+=========================================================*/
+
+.particle{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#4FC3F7;
+
+    box-shadow:
+
+        0 0 10px #4FC3F7,
+
+        0 0 20px #00BFFF,
+
+        0 0 35px rgba(79,195,247,.45);
+
+    opacity:.5;
+
+    animation:particleFloat linear infinite;
+
+}
+
+@keyframes particleFloat{
+
+    0%{
+
+        transform:translateY(0) scale(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:.6;
+
+        transform:scale(1);
+
+    }
+
+    80%{
+
+        opacity:.6;
+
+    }
+
+    100%{
+
+        transform:translateY(-300px) scale(1.3);
+
+        opacity:0;
+
+    }
+
+}
+/*========================================================
+
+        FINPAY PREMIUM EFFECTS
+
+=========================================================*/
+
+
+/*========================
+     SOFT LIGHT EFFECT
+=========================*/
+
+.light{
+
+    position:absolute;
+
+    width:500px;
+
+    height:500px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,255,255,.10),
+        transparent 70%
+    );
+
+    filter:blur(40px);
+
+    animation:lightMove 18s ease-in-out infinite;
+
+    pointer-events:none;
+
+}
+
+
+/*========================
+     LIGHT ANIMATION
+=========================*/
+
+@keyframes lightMove{
+
+0%{
+
+transform:
+translate(-60px,-30px);
+
+}
+
+25%{
+
+transform:
+translate(40px,20px);
+
+}
+
+50%{
+
+transform:
+translate(80px,-20px);
+
+}
+
+75%{
+
+transform:
+translate(-30px,40px);
+
+}
+
+100%{
+
+transform:
+translate(-60px,-30px);
+
+}
+
+}
+
+
+/*========================
+     DEPTH EFFECT
+=========================*/
+
+.logo.blur{
+
+    filter:
+
+    blur(2px)
+
+    drop-shadow(0 0 20px rgba(0,200,83,.15));
+
+    opacity:.07;
+
+}
+
+.logo.near{
+
+    opacity:.22;
+
+}
+
+.logo.far{
+
+    opacity:.10;
+
+}
+
+
+/*========================
+    TWINKLING STARS
+=========================*/
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    box-shadow:
+
+    0 0 10px #ffffff;
+
+    animation:twinkle 4s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.2;
+
+transform:scale(.8);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(1.8);
+
+}
+
+100%{
+
+opacity:.2;
+
+transform:scale(.8);
+
+}
+
+}
+
+
+/*========================
+     CARD HOVER
+=========================*/
+
+.login-card{
+
+    transition:
+
+    transform .45s,
+
+    box-shadow .45s;
+
+}
+
+.login-container {
+    width: 380px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+.login-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.45),
+
+    0 0 60px rgba(0,200,83,.28);
+
+}
+
+
+/*========================
+     LOGO HOVER
+=========================*/
+
+.top-logo img{
+
+    transition:.5s;
+
+}
+
+.top-logo img:hover{
+
+    transform:
+
+    rotate(10deg)
+
+    scale(1.08);
+
+}
+/* ==========================================
+        LARGE DESKTOP (1440px+)
+========================================== */
+
+@media screen and (min-width:1440px){
+
+    .login-card{
+        width:500px;
+        padding:45px;
+    }
+
+}
+
+
+/* ==========================================
+          LAPTOPS (1024px - 1439px)
+========================================== */
+
+@media screen and (min-width:1024px) and (max-width:1439px){
+
+    .login-card{
+        width:450px;
+        padding:40px;
+    }
+
+}
+
+
+/* ==========================================
+          TABLETS (768px - 1023px)
+========================================== */
+
+@media screen and (min-width:768px) and (max-width:1023px){
+
+    .login-card{
+        width:430px;
+        max-width:90%;
+        padding:35px;
+    }
+
+}
+
+
+/* ==========================================
+      LARGE PHONES (481px - 767px)
+========================================== */
+
+@media screen and (min-width:481px) and (max-width:767px){
+
+    .login-card{
+        width:92%;
+        padding:30px;
+    }
+
+    .social{
+        flex-direction:column;
+    }
+
+}
+
+
+/* ==========================================
+      SMALL PHONES (480px and below)
+========================================== */
+
+@media screen and (max-width:480px){
+
+    .login-card {
+    width: 380px;
+    padding: 40px;
+
+    background: rgba(255, 255, 255, 0.25); /* MUST be transparent */
+    
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+    .top-logo img{
+        width:65px;
+    }
+
+    .top-logo h1{
+        font-size:24px;
+    }
+
+    .login-card h2{
+        font-size:22px;
+    }
+
+    .social{
+        flex-direction:column;
+    }
+
+}
+/*========================================================
+
+        FINAL POLISH
+
+=========================================================*/
+
+
+/* Smooth Fade In */
+
+body{
+
+    animation:pageLoad 1s ease;
+
+}
+
+@keyframes pageLoad{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* Smooth Scrolling */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+/* Better Text Selection */
+
+::selection{
+
+    background:#00C853;
+
+    color:#ffffff;
+
+}
+
+
+/* Prevent Images from Being Dragged */
+
+img{
+
+    user-select:none;
+
+    -webkit-user-drag:none;
+
+}
+
+
+/* Better Button Animation */
+
+button{
+
+    transition:
+
+    transform .35s,
+
+    box-shadow .35s,
+
+    background .35s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+
+/* Better Input Animation */
+
+input{
+
+    transition:.3s;
+
+}
+
+
+/* Improve Logo Quality */
+
+.logo img{
+
+    object-fit:contain;
+
+    image-rendering:auto;
+
+}
+
+
+/* Better Particle Performance */
+
+.particle{
+
+    will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+
+/* Better Logo Performance */
+
+.logo{
+
+    will-change:
+
+    transform,
+
+    opacity;
+
+}
+
+
+/* Glass Reflection */
+
+.login-card{
+
+    overflow:hidden;
+
+}
+
+.login-card::before{
+
+    pointer-events:none;
+
+}
+
+
+/* Soft White Border */
+
+.login-card{
+
+    border:1px solid rgba(255,255,255,.18);
+
+}
+
+
+/* Nice Cursor */
+
+button{
+
+    cursor:pointer;
+
+}
+
+a{
+
+    cursor:pointer;
+
+}
+
+
+/* Reduce Motion for Users Who Prefer It */
+
+@media (prefers-reduced-motion:reduce){
+
+*{
+
+animation:none !important;
+
+transition:none !important;
+
+}
+
+}
+
+
+/* Small Phones */
+
+@media(max-width:360px){
+
+.login-card{
+
+padding:18px;
+
+}
+
+.top-logo img{
+
+width:55px;
+
+}
+
+.login-card h2{
+
+font-size:18px;
+
+}
+
+.login-btn{
+
+height:48px;
+
+font-size:15px;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================
+   FINPAY LOGIN CSS
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:30px;
+
+    overflow:hidden;
+
+    background:radial-gradient(
+        circle at top left,
+        #19c37d 100%,
+        #d9f8e8 45%,
+        #f4fff8 0%
+    );
+
+}
+
+/* ==========================
+   BACKGROUND SHAPES
+========================== */
+
+.background-shapes{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.shape{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+}
+
+.shape.one{
+
+    width:300px;
+
+    height:300px;
+
+    background:rgba(25,195,125,.25);
+
+    top:-80px;
+
+    left:-80px;
+
+}
+
+.shape.two{
+
+    width:250px;
+
+    height:250px;
+
+    background:rgba(25,195,125,.18);
+
+    bottom:-70px;
+
+    right:-70px;
+
+}
+
+/* ==========================
+   LOGIN CARD
+========================== */
+
+.login-card{
+
+    width:100%;
+    max-width:430px;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:20px;
+
+}
+
+.logo img{
+
+    width:80px;
+
+}
+
+/* ==========================
+   TEXT
+========================== */
+
+h1{
+
+    text-align:center;
+
+    color:#0f172a;
+
+    margin-bottom:8px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#64748b;
+
+    margin-bottom:30px;
+
+    line-height:1.5;
+
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.input-group{
+
+    position:relative;
+
+    margin-bottom:18px;
+
+}
+
+.input-group i:first-child{
+
+    position:absolute;
+
+    left:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#19c37d;
+
+}
+
+.input-group input{
+
+    width:100%;
+
+    padding:15px 48px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.80);
+
+    font-size:15px;
+
+}
+
+#togglePassword{
+
+    position:absolute;
+
+    right:15px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#888;
+
+}
+
+/* ==========================
+   LOGIN BUTTON
+========================== */
+
+.login-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#19c37d;
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:#14a96b;
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+   DIVIDER
+========================== */
+
+.divider{
+
+    text-align:center;
+
+    margin:25px 0;
+
+    color:#666;
+
+}
+
+/* ==========================
+   SOCIAL BUTTONS
+========================== */
+
+.social-buttons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.social-buttons button{
+
+    flex:1;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.google{
+
+    background:#fff;
+
+}
+
+.facebook{
+
+    background:#1877f2;
+
+    color:#fff;
+
+}
+
+.social-buttons button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================
+   SIGN UP LINK
+========================== */
+
+.auth-link{
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.auth-link a{
+
+    color:#19c37d;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.auth-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:480px){
+
+    .login-card{
+
+        padding:30px 22px;
+
+    }
+
+    .social-buttons{
+
+        flex-direction:column;
+
+    }
+
+}

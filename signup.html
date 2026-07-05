@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FinPay | Sign Up</title>
+
+    <link rel="stylesheet" href="signup.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="background-shapes">
+        <div class="shape one"></div>
+        <div class="shape two"></div>
+    </div>
+
+    <div class="signup-card">
+
+        <div class="logo">
+            <img src="finpay images/finpay.png" alt="FinPay Logo">
+        </div>
+
+        <h1>Create Account</h1>
+
+        <p class="subtitle">
+            Join FinPay and take control of your finances.
+        </p>
+
+        <form id="signupForm">
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="Full Name"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email Address"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Password"
+                    required>
+
+                <i class="fa-solid fa-eye"
+                    id="togglePassword"></i>
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Confirm Password"
+                    required>
+
+                <i class="fa-solid fa-eye"
+                    id="toggleConfirmPassword"></i>
+
+            </div>
+
+            <button
+                type="submit"
+                class="signup-btn">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <div class="divider">
+            <span>or continue with</span>
+        </div>
+
+        <div class="social-buttons">
+
+            <button class="google">
+
+                <i class="fa-brands fa-google"></i>
+
+                Google
+
+            </button>
+
+            <button class="facebook">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+                Facebook
+
+            </button>
+
+        </div>
+
+        <p class="auth-link">
+
+            Already have an account?
+
+            <a href="login.html">Sign In</a>
+
+        </p>
+
+    </div>
+
+    <script src="signup.js"></script>
+
+</body>
+
+</html>
